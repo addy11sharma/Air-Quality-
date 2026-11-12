@@ -1,0 +1,5 @@
+# Lecture Hall AQ Monitor
+User-agent: *
+Allow: /
+
+Sitemap: https://lecture-hall-aq-monitor.vercel.app/sitemap.xml

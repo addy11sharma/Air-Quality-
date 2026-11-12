@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lecture-hall-aq"
+version = "1.0.0"
+description = "Air quality analysis for lecture halls using CPCB/SAFAR data"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+  "requests>=2.31",
+  "pandas>=2.0",
+  "numpy>=1.24"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "black>=23"]
+
+[project.scripts]
+aq-monitor = "aqi.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
